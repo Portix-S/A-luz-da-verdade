@@ -1344,6 +1344,8 @@ GameObject:
   m_Component:
   - component: {fileID: 983802192}
   - component: {fileID: 983802193}
+  - component: {fileID: 983802194}
+  - component: {fileID: 983802195}
   m_Layer: 5
   m_Name: Inventor
   m_TagString: Untagged
@@ -1368,7 +1370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -631, y: 0}
+  m_AnchoredPosition: {x: -1197, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &983802193
@@ -1423,6 +1425,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &983802194
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983802191}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aff7eb5ab08813d41a478b6a34657d29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &983802195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983802191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb996dbe15d26a41b2ca18d86b8756e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1170271993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,6 +2061,7 @@ MonoBehaviour:
   approveButton: {fileID: 1880742950}
   disapproveButton: {fileID: 150384292}
   lampMovement: {fileID: 1415502245}
+  inventorScript: {fileID: 983802195}
 --- !u!114 &1851664139
 MonoBehaviour:
   m_ObjectHideFlags: 0

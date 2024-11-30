@@ -21,6 +21,7 @@ public class PatentManager : MonoBehaviour
     [SerializeField] private GameObject disapproveButton;
     
     [SerializeField] private LampMovement lampMovement;
+    [SerializeField] private Inventor inventorScript;
 
     public void ShowExitDialog(bool approved)
     {
@@ -29,14 +30,23 @@ public class PatentManager : MonoBehaviour
         patentSpriteRenderer.gameObject.SetActive(false);
         disapproveButton.SetActive(false);
         approveButton.SetActive(false);
-        exitDialogText.text = approved ? _dialogApprove : _dialogDisapprove;
+        if (approved)
+        {
+            enterDialogText.text = _dialogApprove;
+            inventorScript.LeaveApproved();
+        }
+        else
+        {
+            enterDialogText.text = _dialogDisapprove;
+            inventorScript.LeaveRejected();
+        }
         exitDialogText.gameObject.transform.parent.gameObject.SetActive(true);
     }
     
     public void LoadNewInventor()
     {
         exitDialogText.gameObject.transform.parent.gameObject.SetActive(false);
-
+        inventorScript.gameObject.SetActive(true);
         _currentInventor++;
         _currentInventorScript = inventors[_currentInventor];
         patentSpriteRenderer.sprite = _currentInventorScript.patentImage;
