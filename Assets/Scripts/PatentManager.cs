@@ -50,7 +50,7 @@ public class PatentManager : MonoBehaviour
         _currentInventor++;
         _currentInventorScript = inventors[_currentInventor];
         patentSpriteRenderer.sprite = _currentInventorScript.patentImage;
-        // inventorImage.sprite = _currentInventorScript.inventorImage;
+        inventorSpriteRenderer.sprite = _currentInventorScript.inventorImage;
         enterDialogText.text = _currentInventorScript.inventorEnterDialog;
         _dialogApprove = _currentInventorScript.inventorExitDialogApprove;
         _dialogDisapprove = _currentInventorScript.inventorExitDialogDisapprove;
