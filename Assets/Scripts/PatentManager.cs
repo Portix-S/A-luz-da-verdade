@@ -17,15 +17,23 @@ public class PatentManager : MonoBehaviour
     private int _currentInventor = -1;
     private ScriptableInventor _currentInventorScript;
 
-    public void HidePatent()
+    [SerializeField] private GameObject approveButton;
+    [SerializeField] private GameObject disapproveButton;
+
+    public void ShowExitDialog(bool approved)
     {
+        // anim?
         patentImage.gameObject.SetActive(false);
-        enterDialogText.gameObject.SetActive(true);
+        disapproveButton.SetActive(false);
+        approveButton.SetActive(false);
+        exitDialogText.text = approved ? _dialogApprove : _dialogDisapprove;
+        exitDialogText.gameObject.transform.parent.gameObject.SetActive(true);
     }
     
     public void LoadNewInventor()
     {
-        HidePatent();
+        exitDialogText.gameObject.transform.parent.gameObject.SetActive(false);
+
         _currentInventor++;
         _currentInventorScript = inventors[_currentInventor];
         patentImage.sprite = _currentInventorScript.patentImage;
@@ -33,13 +41,22 @@ public class PatentManager : MonoBehaviour
         enterDialogText.text = _currentInventorScript.inventorEnterDialog;
         _dialogApprove = _currentInventorScript.inventorExitDialogApprove;
         _dialogDisapprove = _currentInventorScript.inventorExitDialogDisapprove;
+        
+        Invoke(nameof(ShowEnterDialog), 2f);
     }
 
+    private void ShowEnterDialog()
+    {
+        enterDialogText.gameObject.transform.parent.gameObject.SetActive(true);
+    }
+    
     public void ShowPatent()
     {
         // anim?
         patentImage.gameObject.SetActive(true);
-        enterDialogText.gameObject.SetActive(false);
+        approveButton.SetActive(true);
+        disapproveButton.SetActive(true);
+        enterDialogText.gameObject.transform.parent.gameObject.SetActive(false);
     }
     
     

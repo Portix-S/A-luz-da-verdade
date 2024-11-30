@@ -281,7 +281,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 150384295}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1851664138}
+        m_TargetAssemblyTypeName: PatentManager, Assembly-CSharp
+        m_MethodName: ShowExitDialog
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &150384295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.16968393, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.009590022, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -781,7 +793,7 @@ GameObject:
   - component: {fileID: 680834320}
   - component: {fileID: 680834319}
   m_Layer: 5
-  m_Name: Dialog
+  m_Name: EnterDialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -922,7 +934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &949536940
 RectTransform:
   m_ObjectHideFlags: 0
@@ -988,13 +1000,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1851664136}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1851664138}
+        m_TargetAssemblyTypeName: PatentManager, Assembly-CSharp
+        m_MethodName: LoadNewInventor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1185,7 +1197,7 @@ GameObject:
   - component: {fileID: 1195384814}
   - component: {fileID: 1195384813}
   m_Layer: 5
-  m_Name: Dialog
+  m_Name: ExitDialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1490,10 +1502,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patentImage: {fileID: 406551280}
   inventorImage: {fileID: 0}
-  enterDialogText: {fileID: 0}
-  exitDialogText: {fileID: 0}
+  enterDialogText: {fileID: 680834319}
+  exitDialogText: {fileID: 1195384813}
   inventors:
   - {fileID: 11400000, guid: 7e7563e2c08746944a695f77dcf15372, type: 2}
+  - {fileID: 11400000, guid: 5e13375210f3ce54d93a24eb9b1e6b22, type: 2}
+  approveButton: {fileID: 1880742950}
+  disapproveButton: {fileID: 150384292}
 --- !u!114 &1851664139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1589,7 +1604,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1880742953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1851664138}
+        m_TargetAssemblyTypeName: PatentManager, Assembly-CSharp
+        m_MethodName: ShowExitDialog
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1880742953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1963,7 +1990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2084727316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2067,13 +2094,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1851664136}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1851664138}
+        m_TargetAssemblyTypeName: PatentManager, Assembly-CSharp
+        m_MethodName: ShowPatent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

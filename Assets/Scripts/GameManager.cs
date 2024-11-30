@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _patentManager = GetComponent<PatentManager>();
-        LoadNewInventor();
+        LoadNewInventor(); // TODO: remove later
     }
 
     public void StartGame()
@@ -34,20 +34,17 @@ public class GameManager : MonoBehaviour
 
     public void Approve()
     {
-        
-        Invoke(nameof(LoadNewInventor), 5f);
+        _patentManager.ShowExitDialog(true);
     }
 
     public void Reprove()
     {
-        
-        Invoke(nameof(LoadNewInventor), 5f);
+        _patentManager.ShowExitDialog(false);
     }
 
     private void LoadNewInventor() // maybe use as scriptable
     {
         _patentManager.LoadNewInventor(); // pass scriptable?
     }
-    
-    
+
 }
