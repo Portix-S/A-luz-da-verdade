@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class PatentManager : MonoBehaviour
 {
-    [SerializeField] private Image patentImage;
-    [SerializeField] private Image inventorImage;
+    [SerializeField] private SpriteRenderer patentSpriteRenderer;
+    [SerializeField] private SpriteRenderer inventorSpriteRenderer;
     [SerializeField] private TextMeshProUGUI enterDialogText;
     [SerializeField] private TextMeshProUGUI exitDialogText;
     private string _dialogApprove;
@@ -19,11 +19,14 @@ public class PatentManager : MonoBehaviour
 
     [SerializeField] private GameObject approveButton;
     [SerializeField] private GameObject disapproveButton;
+    
+    [SerializeField] private LampMovement lampMovement;
 
     public void ShowExitDialog(bool approved)
     {
         // anim?
-        patentImage.gameObject.SetActive(false);
+        lampMovement.ToggleLampMovement();
+        patentSpriteRenderer.gameObject.SetActive(false);
         disapproveButton.SetActive(false);
         approveButton.SetActive(false);
         exitDialogText.text = approved ? _dialogApprove : _dialogDisapprove;
@@ -36,7 +39,7 @@ public class PatentManager : MonoBehaviour
 
         _currentInventor++;
         _currentInventorScript = inventors[_currentInventor];
-        patentImage.sprite = _currentInventorScript.patentImage;
+        patentSpriteRenderer.sprite = _currentInventorScript.patentImage;
         // inventorImage.sprite = _currentInventorScript.inventorImage;
         enterDialogText.text = _currentInventorScript.inventorEnterDialog;
         _dialogApprove = _currentInventorScript.inventorExitDialogApprove;
@@ -53,7 +56,8 @@ public class PatentManager : MonoBehaviour
     public void ShowPatent()
     {
         // anim?
-        patentImage.gameObject.SetActive(true);
+        lampMovement.ToggleLampMovement();
+        patentSpriteRenderer.gameObject.SetActive(true);
         approveButton.SetActive(true);
         disapproveButton.SetActive(true);
         enterDialogText.gameObject.transform.parent.gameObject.SetActive(false);

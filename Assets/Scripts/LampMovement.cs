@@ -8,12 +8,20 @@ using UnityEngine.Serialization;
 public class LampMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private Canvas myCanvas;
-    private bool _canMove = true;
+    private bool _canMove = false;
     private Vector3 _initialPosition;
-
+    private Vector3 _initialScale;
+    [SerializeField] private float lampScale = 2f;
+    
     private void Start()
     {
         _initialPosition = transform.position;
+        _initialScale = transform.localScale;
+    }
+
+    public void ToggleLampMovement()
+    {
+        _canMove = !_canMove;
     }
 
 
@@ -21,6 +29,7 @@ public class LampMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         if (!_canMove) return;
 
+        transform.localScale *= lampScale;
     }
     
     public void OnDrag(PointerEventData eventdata) // Perfect for Dragging
@@ -36,5 +45,6 @@ public class LampMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         if (!_canMove) return;
         
         transform.position = _initialPosition;
+        transform.localScale = _initialScale;
     }
 }
