@@ -106,7 +106,7 @@ public class PatentManager : MonoBehaviour
     public void LoadNewInventorWithDelay()
     {
         exitDialogText.gameObject.transform.parent.gameObject.SetActive(false);
-        Invoke(nameof(LoadNewInventor), 1.1f);
+        Invoke(nameof(LoadNewInventor), 1.4f);
     }
     
     public void LoadNewInventor()
@@ -136,7 +136,14 @@ public class PatentManager : MonoBehaviour
         _dialogApprove = _currentInventorScript.inventorExitDialogApprove;
         _dialogDisapprove = _currentInventorScript.inventorExitDialogDisapprove;
         
+        Invoke(nameof(DoubleCheckInventor), 0.3f);
         Invoke(nameof(ShowEnterDialog), 1f);
+    }
+
+    private void DoubleCheckInventor()
+    {
+        if(!inventorScript.gameObject.activeSelf)
+            inventorScript.gameObject.SetActive(true);
     }
 
     private void ShowEnterDialog()

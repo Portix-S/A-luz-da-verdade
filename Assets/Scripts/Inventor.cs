@@ -23,7 +23,7 @@ public class Inventor : MonoBehaviour
     {
         _animator.SetTrigger(Accepted);
     }
-
+    
     public void DisableInventor()
     {
         gameObject.SetActive(false);

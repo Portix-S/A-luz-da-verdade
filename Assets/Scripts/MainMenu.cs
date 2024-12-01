@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject endMenu;
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject tutorialDialog;
+    private bool _canOpenCurtain = true;
 
     private void Start()
     {
@@ -27,6 +28,8 @@ public class MainMenu : MonoBehaviour
 
     public void OpenCurtain()
     {
+        if (!_canOpenCurtain) return;
+        _canOpenCurtain = false;
         if(curtainAnimator.enabled)
             curtainAnimator.SetTrigger(OpenCloseCurtain);
         curtainAnimator.enabled = true;
@@ -41,6 +44,7 @@ public class MainMenu : MonoBehaviour
     
     private void StartGame()
     {
+        _canOpenCurtain = true;
         tutorialDialog.SetActive(false);
         _currentMenu.SetActive(false);
         _currentMenu = gameMenu;

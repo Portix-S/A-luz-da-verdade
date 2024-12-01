@@ -23,13 +23,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _patentManager = GetComponent<PatentManager>();
-        LoadNewInventor(); // TODO: remove later
-    }
-
-    public void StartGame()
-    {
         LoadNewInventor();
     }
+    
 
     public void Approve()
     {
