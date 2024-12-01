@@ -632,7 +632,8 @@ MonoBehaviour:
   m_text: Obrigado Por Jogar!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
-  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
+  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1415,11 +1416,11 @@ RectTransform:
   m_Father: {fileID: 517362904}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1400, y: 419.3}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0000076293945, y: 0}
+  m_SizeDelta: {x: 1684.93, y: 813.07}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &363756744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1489,14 +1490,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6627451}
+  m_Color: {r: 0.22264141, g: 0.20961899, b: 0.20961899, a: 0.6627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d76e80a22f192cd40bfc2a94df18fded, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2862,7 +2864,8 @@ MonoBehaviour:
   m_text: Reprovar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
-  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
+  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3440,10 +3443,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tutorial aqui
+  m_text: "Bem vindo ao Escritorio de Patentes!\n\nVoc\xEA \xE9 o respons\xE1vel por
+    analisar pedidos de patente de cientistas e inventores renomados. \nMas cuidado!
+    Nem todos dizem a verdade sobre suas cria\xE7\xF5es.\n\nAprove ou rejeite patentes
+    com base na veracidade das inven\xE7\xF5es.\nSomente os verdadeiros inventores
+    devem ser aprovados.\n\nSe voc\xEA tiver a L\xE2mpada, use-a para revelar detalhes
+    ocultos ou inconsist\xEAncias nos documentos."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
+  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3801,7 +3810,8 @@ MonoBehaviour:
   m_text: A Luz da Verdade
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
-  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
+  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4221,7 +4231,8 @@ MonoBehaviour:
   m_text: Sair
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
-  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
+  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4589,7 +4600,8 @@ MonoBehaviour:
   m_text: Creditos
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
-  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
+  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4724,7 +4736,8 @@ MonoBehaviour:
   m_text: Voltar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
-  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
+  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5236,7 +5249,8 @@ MonoBehaviour:
   m_text: Jogar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
-  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
+  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6048,7 +6062,8 @@ MonoBehaviour:
   m_text: Voltar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
-  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806, type: 2}
+  m_sharedMaterial: {fileID: -8570160176638653013, guid: 4444f8b02f24eb645b07307e05245806,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
