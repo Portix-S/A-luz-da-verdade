@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -20,10 +21,20 @@ public class PatentManager : MonoBehaviour
 
     [SerializeField] private GameObject approveButton;
     [SerializeField] private GameObject disapproveButton;
+    [SerializeField] private GameObject alreadyApprovedPatentDialog;
     
     [SerializeField] private LampMovement lampMovement;
     [SerializeField] private SpriteRenderer handSprite;
     [SerializeField] private Inventor inventorScript;
+
+    private Dictionary<int, bool> _approvedPatents = new();
+    
+    private MainMenu _mainMenu;
+
+    private void Start()
+    {
+        _mainMenu = GetComponent<MainMenu>();
+    }
 
     public void ShowExitDialog(bool approved)
     {
@@ -34,14 +45,22 @@ public class PatentManager : MonoBehaviour
         var leaveDelay = 0f;
         if (_currentInventorScript.unlockLamp)
         {
-            lampMovement.gameObject.SetActive(true);
-            handSprite.gameObject.SetActive(true);
-            leaveDelay = 1f;
-            Invoke(nameof(DisappearHand), leaveDelay);
+            if((!approved && _approvedPatents.ContainsKey(_currentInventorScript.patentId)) || !_approvedPatents.ContainsKey(_currentInventorScript.patentId))
+            {
+                lampMovement.gameObject.SetActive(true);
+                handSprite.gameObject.SetActive(true);
+                leaveDelay = 1f;
+                Invoke(nameof(DisappearHand), leaveDelay);
+            } 
+
         }
 
         if (approved)
         {
+            if (CheckAlreadyApprovedPatent())
+            {
+                return;
+            }
             exitDialogText.text = _dialogApprove;
             Invoke(nameof(LeaveApproved), leaveDelay);
         }
@@ -53,6 +72,22 @@ public class PatentManager : MonoBehaviour
         exitDialogText.gameObject.transform.parent.gameObject.SetActive(true);
     }
 
+    private bool CheckAlreadyApprovedPatent()
+    {
+        if (_approvedPatents.TryAdd(_currentInventorScript.patentId, true)) return false;
+        approveButton.SetActive(false);
+        alreadyApprovedPatentDialog.SetActive(true);
+        return true;
+    }
+
+    public void HideAlreadyApprovedPatentDialog()
+    {
+        alreadyApprovedPatentDialog.SetActive(false);
+        patentSpriteRenderer.gameObject.SetActive(true);
+        disapproveButton.SetActive(true);
+    }
+    
+    
     private void LeaveApproved()
     {
         inventorScript.LeaveApproved();
@@ -79,6 +114,13 @@ public class PatentManager : MonoBehaviour
         exitDialogText.gameObject.transform.parent.gameObject.SetActive(false);
         inventorScript.gameObject.SetActive(true);
         _currentInventor++;
+        if (_currentInventor >= inventors.Count)
+        {
+            lampMovement.gameObject.SetActive(false);
+            _mainMenu.CloseCurtain();
+            return;
+        }
+        
         _currentInventorScript = inventors[_currentInventor];
         
         var correctPatent = _currentInventorScript.patentImage;

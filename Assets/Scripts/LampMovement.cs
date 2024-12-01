@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 public class LampMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private Canvas myCanvas;
-    private bool _canMove = false;
+    [SerializeField] private bool canMove = false;
     private Vector3 _initialPosition;
     private Vector3 _initialScale;
     [SerializeField] private float lampScale = 2f;
@@ -19,25 +19,24 @@ public class LampMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         _initialPosition = transform.position;
         _initialScale = transform.localScale;
         _lampZoomedScale = transform.localScale * lampScale;
-
     }
 
     public void ToggleLampMovement()
     {
-        _canMove = !_canMove;
+        canMove = !canMove;
     }
 
 
     public void OnBeginDrag(PointerEventData eventdata)
     {
-        if (!_canMove) return;
+        if (!canMove) return;
 
         transform.localScale = _lampZoomedScale;
     }
     
     public void OnDrag(PointerEventData eventdata) // Perfect for Dragging
     {
-        if (!_canMove) return;
+        if (!canMove) return;
 
         RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out var pos);
         pos.y -= 200f;
@@ -46,7 +45,7 @@ public class LampMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventdata)
     {
-        if (!_canMove) return;
+        if (!canMove) return;
         
         transform.position = _initialPosition;
         transform.localScale = _initialScale;
