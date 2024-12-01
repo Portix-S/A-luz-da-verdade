@@ -22,26 +22,50 @@ public class PatentManager : MonoBehaviour
     [SerializeField] private GameObject disapproveButton;
     
     [SerializeField] private LampMovement lampMovement;
+    [SerializeField] private SpriteRenderer handSprite;
     [SerializeField] private Inventor inventorScript;
 
     public void ShowExitDialog(bool approved)
     {
-        // anim?
         lampMovement.ToggleLampMovement();
         patentSpriteRenderer.gameObject.SetActive(false);
         disapproveButton.SetActive(false);
         approveButton.SetActive(false);
+        var leaveDelay = 0f;
+        if (_currentInventorScript.unlockLamp)
+        {
+            lampMovement.gameObject.SetActive(true);
+            handSprite.gameObject.SetActive(true);
+            leaveDelay = 1f;
+            Invoke(nameof(DisappearHand), leaveDelay);
+        }
+
         if (approved)
         {
             exitDialogText.text = _dialogApprove;
-            inventorScript.LeaveApproved();
+            Invoke(nameof(LeaveApproved), leaveDelay);
         }
         else
         {
             exitDialogText.text = _dialogDisapprove;
-            inventorScript.LeaveRejected();
+            Invoke(nameof(LeaveRejected), leaveDelay);
         }
         exitDialogText.gameObject.transform.parent.gameObject.SetActive(true);
+    }
+
+    private void LeaveApproved()
+    {
+        inventorScript.LeaveApproved();
+    }
+
+    private void LeaveRejected()
+    {
+        inventorScript.LeaveRejected();
+    }
+    
+    private void DisappearHand()
+    {
+        handSprite.gameObject.SetActive(false);
     }
 
     public void LoadNewInventorWithDelay()
@@ -63,6 +87,8 @@ public class PatentManager : MonoBehaviour
         
         var wrongPatent = _currentInventorScript.wrongPatentImage;
         wrongPatentSpriteRenderer.sprite = !wrongPatent ?  correctPatent : wrongPatent;
+
+        handSprite.sprite = _currentInventorScript.handSprite;
         
         enterDialogText.text = _currentInventorScript.inventorEnterDialog;
         _dialogApprove = _currentInventorScript.inventorExitDialogApprove;

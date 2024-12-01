@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patentImage: {fileID: 21300000, guid: 640ffe9d06813b94f916754dfcf617c0, type: 3}
   wrongPatentImage: {fileID: 21300000, guid: 98d60bf2ed920114b910f14a705d8810, type: 3}
-  inventorImage: {fileID: 21300000, guid: ef9a99537ca45694083595e06a0ee082, type: 3}
+  inventorImage: {fileID: 21300000, guid: 0e556746db6616a409e43dff0bfcda68, type: 3}
+  handSprite: {fileID: 21300000, guid: 807c03915ab4dd14ab05257b443d77cb, type: 3}
   patentId: 0
   inventorEnterDialog: "Com a minha inven\xE7\xE3o, humanos podem voar! "
   inventorExitDialogApprove: 'Um pequeno passo para mim e um grande passo para a
     humanidade. '
   inventorExitDialogDisapprove: "Droga! Voltarei com uma nova vers\xE3o do meu trabalho."
+  unlockLamp: 1
