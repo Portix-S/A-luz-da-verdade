@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Lewis
   m_EditorClassIdentifier: 
   patentImage: {fileID: 21300000, guid: 640ffe9d06813b94f916754dfcf617c0, type: 3}
+  wrongPatentImage: {fileID: 0}
   inventorImage: {fileID: 21300000, guid: ef9a99537ca45694083595e06a0ee082, type: 3}
+  handSprite: {fileID: 21300000, guid: 228c4d7d91774e547a09011900d94bd6, type: 3}
+  patentId: 0
   inventorEnterDialog: "A luz para as pessoas ser\xE1 mais duradoura e mais brilhante! "
   inventorExitDialogApprove: "Obrigado amigo, receba esse presente como forma de
     gratid\xE3o."
   inventorExitDialogDisapprove: Tome este presente, pode ajudar a iluminar os seus
     pensamentos.
+  unlockLamp: 1
