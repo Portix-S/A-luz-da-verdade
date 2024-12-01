@@ -298,9 +298,9 @@ RectTransform:
   m_Father: {fileID: 1937742301}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -745, y: -467}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 215, y: 61}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &150384294
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCanvas: {fileID: 517362903}
-  lampScale: 2
+  lampScale: 1.6
 --- !u!331 &277621962
 SpriteMask:
   m_ObjectHideFlags: 0
@@ -604,9 +604,9 @@ RectTransform:
   m_Father: {fileID: 1937742301}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 798, y: 389}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -162, y: -147}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &404315984
@@ -727,10 +727,10 @@ RectTransform:
   m_Father: {fileID: 1937742301}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -877}
-  m_SizeDelta: {x: 2.9, y: 4.7}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: -433}
+  m_SizeDelta: {x: 2.9, y: 4.700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &406551281
 CanvasRenderer:
@@ -1130,10 +1130,10 @@ RectTransform:
   m_Father: {fileID: 1937742301}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -877}
-  m_SizeDelta: {x: 2.9, y: 4.7}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: -433}
+  m_SizeDelta: {x: 2.9, y: 4.700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &664504921
 CanvasRenderer:
@@ -1416,7 +1416,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1851664138}
         m_TargetAssemblyTypeName: PatentManager, Assembly-CSharp
-        m_MethodName: LoadNewInventor
+        m_MethodName: LoadNewInventorWithDelay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1491,7 +1491,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983802191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9731.424}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 125.13229, y: 125.13229, z: 125.13229}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2039,6 +2039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patentSpriteRenderer: {fileID: 406551282}
+  wrongPatentSpriteRenderer: {fileID: 664504922}
   inventorSpriteRenderer: {fileID: 983802193}
   enterDialogText: {fileID: 680834319}
   exitDialogText: {fileID: 1195384813}
@@ -2096,9 +2097,9 @@ RectTransform:
   m_Father: {fileID: 1937742301}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 745, y: -467}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -215, y: 61}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880742952

@@ -12,11 +12,14 @@ public class LampMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     private Vector3 _initialPosition;
     private Vector3 _initialScale;
     [SerializeField] private float lampScale = 2f;
+    private Vector3 _lampZoomedScale;
     
     private void Start()
     {
         _initialPosition = transform.position;
         _initialScale = transform.localScale;
+        _lampZoomedScale = transform.localScale * lampScale;
+
     }
 
     public void ToggleLampMovement()
@@ -29,7 +32,7 @@ public class LampMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         if (!_canMove) return;
 
-        transform.localScale *= lampScale;
+        transform.localScale = _lampZoomedScale;
     }
     
     public void OnDrag(PointerEventData eventdata) // Perfect for Dragging
@@ -37,6 +40,7 @@ public class LampMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         if (!_canMove) return;
 
         RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out var pos);
+        pos.y -= 200f;
         transform.position = myCanvas.transform.TransformPoint(pos);
     }
 

@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     private PatentManager _patentManager;
     public static GameManager GameManagerInstance;
-
     private void Awake()
     {
         if (GameManagerInstance == null)
@@ -45,5 +44,6 @@ public class GameManager : MonoBehaviour
     {
         _patentManager.LoadNewInventor(); // pass scriptable?
     }
+    
 
 }

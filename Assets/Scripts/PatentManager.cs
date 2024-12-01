@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class PatentManager : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer patentSpriteRenderer;
+    [SerializeField] private SpriteRenderer wrongPatentSpriteRenderer;
     [SerializeField] private SpriteRenderer inventorSpriteRenderer;
     [SerializeField] private TextMeshProUGUI enterDialogText;
     [SerializeField] private TextMeshProUGUI exitDialogText;
@@ -32,15 +33,21 @@ public class PatentManager : MonoBehaviour
         approveButton.SetActive(false);
         if (approved)
         {
-            enterDialogText.text = _dialogApprove;
+            exitDialogText.text = _dialogApprove;
             inventorScript.LeaveApproved();
         }
         else
         {
-            enterDialogText.text = _dialogDisapprove;
+            exitDialogText.text = _dialogDisapprove;
             inventorScript.LeaveRejected();
         }
         exitDialogText.gameObject.transform.parent.gameObject.SetActive(true);
+    }
+
+    public void LoadNewInventorWithDelay()
+    {
+        exitDialogText.gameObject.transform.parent.gameObject.SetActive(false);
+        Invoke(nameof(LoadNewInventor), 1.1f);
     }
     
     public void LoadNewInventor()
@@ -49,13 +56,19 @@ public class PatentManager : MonoBehaviour
         inventorScript.gameObject.SetActive(true);
         _currentInventor++;
         _currentInventorScript = inventors[_currentInventor];
-        patentSpriteRenderer.sprite = _currentInventorScript.patentImage;
+        
+        var correctPatent = _currentInventorScript.patentImage;
+        patentSpriteRenderer.sprite = correctPatent;
         inventorSpriteRenderer.sprite = _currentInventorScript.inventorImage;
+        
+        var wrongPatent = _currentInventorScript.wrongPatentImage;
+        wrongPatentSpriteRenderer.sprite = !wrongPatent ?  correctPatent : wrongPatent;
+        
         enterDialogText.text = _currentInventorScript.inventorEnterDialog;
         _dialogApprove = _currentInventorScript.inventorExitDialogApprove;
         _dialogDisapprove = _currentInventorScript.inventorExitDialogDisapprove;
         
-        Invoke(nameof(ShowEnterDialog), 2f);
+        Invoke(nameof(ShowEnterDialog), 1f);
     }
 
     private void ShowEnterDialog()
