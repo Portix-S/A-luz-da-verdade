@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f726cc9ddf4214442b5eaa2aee4013ce, type: 3}
+  m_Name: Thomas Edison
+  m_EditorClassIdentifier: 
+  patentImage: {fileID: 21300000, guid: 640ffe9d06813b94f916754dfcf617c0, type: 3}
+  inventorImage: {fileID: 21300000, guid: 0e556746db6616a409e43dff0bfcda68, type: 3}
+  inventorEnterDialog: "Trouxe minha fabulosa e mais nova inven\xE7\xE3o. Contemple! "
+  inventorExitDialogApprove: "Como esperado! Meu nome ficar\xE1 na hist\xF3ria!"
+  inventorExitDialogDisapprove: "Isso \xE9 um ultraje! Est\xE1 me chamando de charlat\xE3o? "

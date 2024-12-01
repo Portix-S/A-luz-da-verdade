@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f726cc9ddf4214442b5eaa2aee4013ce, type: 3}
-  m_Name: ThomasEdison
+  m_Name: Lewis
   m_EditorClassIdentifier: 
   patentImage: {fileID: 21300000, guid: 640ffe9d06813b94f916754dfcf617c0, type: 3}
-  inventorImage: {fileID: 21300000, guid: 0e556746db6616a409e43dff0bfcda68, type: 3}
-  inventorEnterDialog: "Trouxe minha fabulosa e mais nova inven\xE7\xE3o. Contemple! "
-  inventorExitDialogApprove: "Como esperado! Meu nome ficar\xE1 na hist\xF3ria!"
-  inventorExitDialogDisapprove: "Isso \xE9 um ultraje! Est\xE1 me chamando de charlat\xE3o? "
+  inventorImage: {fileID: 21300000, guid: ef9a99537ca45694083595e06a0ee082, type: 3}
+  inventorEnterDialog: "A luz para as pessoas ser\xE1 mais duradoura e mais brilhante! "
+  inventorExitDialogApprove: "Obrigado amigo, receba esse presente como forma de
+    gratid\xE3o."
+  inventorExitDialogDisapprove: Tome este presente, pode ajudar a iluminar os seus
+    pensamentos.
