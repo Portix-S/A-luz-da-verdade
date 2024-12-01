@@ -31,6 +31,11 @@ public class PatentManager : MonoBehaviour
     
     private MainMenu _mainMenu;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip patentRejectedSound;
+    [SerializeField] private AudioClip patentAcceptedSound;
+    [SerializeField] private AudioSource audioSource;
+    
     private void Start()
     {
         _mainMenu = GetComponent<MainMenu>();
@@ -61,11 +66,15 @@ public class PatentManager : MonoBehaviour
                 return;
             }
             exitDialogText.text = _dialogApprove;
+            if(!patentAcceptedSound)
+                audioSource.PlayOneShot(patentAcceptedSound);
             Invoke(nameof(LeaveApproved), leaveDelay);
         }
         else
         {
             exitDialogText.text = _dialogDisapprove;
+            if(!patentRejectedSound)
+                audioSource.PlayOneShot(patentRejectedSound);
             Invoke(nameof(LeaveRejected), leaveDelay);
         }
         lampMovement.DisableLampMovement();
