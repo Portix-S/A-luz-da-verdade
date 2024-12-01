@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Thomas Edison
   m_EditorClassIdentifier: 
   patentImage: {fileID: 21300000, guid: 640ffe9d06813b94f916754dfcf617c0, type: 3}
+  wrongPatentImage: {fileID: 0}
   inventorImage: {fileID: 21300000, guid: 0e556746db6616a409e43dff0bfcda68, type: 3}
+  handSprite: {fileID: 0}
+  patentId: 1
   inventorEnterDialog: "Trouxe minha fabulosa e mais nova inven\xE7\xE3o. Contemple! "
   inventorExitDialogApprove: "Como esperado! Meu nome ficar\xE1 na hist\xF3ria!"
   inventorExitDialogDisapprove: "Isso \xE9 um ultraje! Est\xE1 me chamando de charlat\xE3o? "
+  unlockLamp: 0

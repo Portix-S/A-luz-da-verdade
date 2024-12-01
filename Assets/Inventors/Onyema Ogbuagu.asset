@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f726cc9ddf4214442b5eaa2aee4013ce, type: 3}
-  m_Name: "Irm\xE3os Wright"
+  m_Name: Onyema Ogbuagu
   m_EditorClassIdentifier: 
   patentImage: {fileID: 21300000, guid: 640ffe9d06813b94f916754dfcf617c0, type: 3}
   wrongPatentImage: {fileID: 21300000, guid: 98d60bf2ed920114b910f14a705d8810, type: 3}
   inventorImage: {fileID: 21300000, guid: 0e556746db6616a409e43dff0bfcda68, type: 3}
   handSprite: {fileID: 0}
-  patentId: 2
-  inventorEnterDialog: "Juntos, mudaremos o futuro dos transportes e explora\xE7\xE3o
-    humana. "
-  inventorExitDialogApprove: Eficaz e preciso.
-  inventorExitDialogDisapprove: "Tsc! Voc\xEA n\xE3o compreende o valor da M\xE1quina
-    de Voar."
+  patentId: 3
+  inventorEnterDialog: "Unidos, venceremos a maior amea\xE7a de nossa era."
+  inventorExitDialogApprove: "Uma vit\xF3ria para a ci\xEAncia e para a humanidade."
+  inventorExitDialogDisapprove: Como pode recusar o que salva vidas?
   unlockLamp: 0

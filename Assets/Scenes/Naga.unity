@@ -2134,10 +2134,10 @@ MonoBehaviour:
   enterDialogText: {fileID: 1855153104}
   exitDialogText: {fileID: 1346534181}
   inventors:
+  - {fileID: 11400000, guid: 7e7563e2c08746944a695f77dcf15372, type: 2}
   - {fileID: 11400000, guid: 15eb9e18346c44244b73912159aca680, type: 2}
   - {fileID: 11400000, guid: 5e13375210f3ce54d93a24eb9b1e6b22, type: 2}
   - {fileID: 11400000, guid: 51d6769e73131e245a007b5154b3b0f4, type: 2}
-  - {fileID: 11400000, guid: 7e7563e2c08746944a695f77dcf15372, type: 2}
   - {fileID: 11400000, guid: 51d6769e73131e245a007b5154b3b0f4, type: 2}
   approveButton: {fileID: 1880011586}
   disapproveButton: {fileID: 640963453}
