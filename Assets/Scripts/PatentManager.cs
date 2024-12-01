@@ -38,7 +38,6 @@ public class PatentManager : MonoBehaviour
 
     public void ShowExitDialog(bool approved)
     {
-        lampMovement.ToggleLampMovement();
         patentSpriteRenderer.gameObject.SetActive(false);
         disapproveButton.SetActive(false);
         approveButton.SetActive(false);
@@ -69,6 +68,7 @@ public class PatentManager : MonoBehaviour
             exitDialogText.text = _dialogDisapprove;
             Invoke(nameof(LeaveRejected), leaveDelay);
         }
+        lampMovement.DisableLampMovement();
         exitDialogText.gameObject.transform.parent.gameObject.SetActive(true);
     }
 
@@ -127,8 +127,7 @@ public class PatentManager : MonoBehaviour
         patentSpriteRenderer.sprite = correctPatent;
         inventorSpriteRenderer.sprite = _currentInventorScript.inventorImage;
         
-        var wrongPatent = _currentInventorScript.wrongPatentImage;
-        wrongPatentSpriteRenderer.sprite = !wrongPatent ?  correctPatent : wrongPatent;
+        wrongPatentSpriteRenderer.sprite = _currentInventorScript.wrongPatentImage ;
 
         handSprite.sprite = _currentInventorScript.handSprite;
         
@@ -154,7 +153,7 @@ public class PatentManager : MonoBehaviour
     public void ShowPatent()
     {
         // anim?
-        lampMovement.ToggleLampMovement();
+        lampMovement.EnableLampMovement();
         patentSpriteRenderer.gameObject.SetActive(true);
         approveButton.SetActive(true);
         disapproveButton.SetActive(true);

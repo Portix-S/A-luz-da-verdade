@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Katherine Johnson
   m_EditorClassIdentifier: 
   patentImage: {fileID: 21300000, guid: 13ce89914986f824eac7d16aeb564022, type: 3}
-  wrongPatentImage: {fileID: 21300000, guid: 13ce89914986f824eac7d16aeb564022, type: 3}
+  wrongPatentImage: {fileID: 0}
   inventorImage: {fileID: 21300000, guid: 3bb73daf712f29643af5215629d590a0, type: 3}
   handSprite: {fileID: 0}
   patentId: 4

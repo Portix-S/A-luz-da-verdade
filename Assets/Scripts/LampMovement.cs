@@ -21,9 +21,14 @@ public class LampMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         _lampZoomedScale = transform.localScale * lampScale;
     }
 
-    public void ToggleLampMovement()
+    public void DisableLampMovement()
     {
-        canMove = !canMove;
+        canMove = false;
+    }
+
+    public void EnableLampMovement()
+    {
+        canMove = true;
     }
 
 
