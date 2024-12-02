@@ -201,10 +201,10 @@ RectTransform:
   m_Father: {fileID: 517362904}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &38153167
 GameObject:
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &111885641
@@ -3780,7 +3780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 237.34982}
+  m_AnchoredPosition: {x: 0, y: -210}
   m_SizeDelta: {x: 322, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1170271995
@@ -3869,7 +3869,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1170271996
@@ -4533,6 +4533,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375386094}
   m_CullTransparentMesh: 1
+--- !u!1 &1382881363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382881365}
+  - component: {fileID: 1382881364}
+  m_Layer: 0
+  m_Name: PatentResponseSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1382881364
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382881363}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.504
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1382881365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382881363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.3103085, y: -1.1099933, z: 3.0320466}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1433567481
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,9 +4823,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c7a7563ee7de3f041b712a5882d78f69, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.333
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5579,13 +5707,13 @@ MonoBehaviour:
   enterDialogText: {fileID: 1855153104}
   exitDialogText: {fileID: 1346534181}
   inventors:
-  - {fileID: 11400000, guid: 7e7563e2c08746944a695f77dcf15372, type: 2}
-  - {fileID: 11400000, guid: 5e13375210f3ce54d93a24eb9b1e6b22, type: 2}
   - {fileID: 11400000, guid: 15eb9e18346c44244b73912159aca680, type: 2}
+  - {fileID: 11400000, guid: 5e13375210f3ce54d93a24eb9b1e6b22, type: 2}
+  - {fileID: 11400000, guid: 7e7563e2c08746944a695f77dcf15372, type: 2}
   - {fileID: 11400000, guid: 51d6769e73131e245a007b5154b3b0f4, type: 2}
   - {fileID: 11400000, guid: 607b9c3f16eaf1040b148a159f1d501f, type: 2}
-  - {fileID: 11400000, guid: 2f9e2b7a6fe5c634ab5e855f13433bfc, type: 2}
   - {fileID: 11400000, guid: a733846520eefb04fb2513c3f0b873e2, type: 2}
+  - {fileID: 11400000, guid: 2f9e2b7a6fe5c634ab5e855f13433bfc, type: 2}
   - {fileID: 11400000, guid: 4d86bbab6a4a38a4f8b643882c9f07ea, type: 2}
   approveButton: {fileID: 1880011586}
   disapproveButton: {fileID: 640963453}
@@ -5593,6 +5721,9 @@ MonoBehaviour:
   lampMovement: {fileID: 277621961}
   handSprite: {fileID: 1307462888}
   inventorScript: {fileID: 983802195}
+  patentRejectedSound: {fileID: 8300000, guid: 43fc736da6d9c4e49891693f0812292d, type: 3}
+  patentAcceptedSound: {fileID: 8300000, guid: da339106fda9a134f9a6f5b7d622b1af, type: 3}
+  audioSource: {fileID: 1382881364}
 --- !u!114 &1851664139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6243,7 +6374,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1959860078

@@ -66,14 +66,14 @@ public class PatentManager : MonoBehaviour
                 return;
             }
             exitDialogText.text = _dialogApprove;
-            if(!patentAcceptedSound)
+            if(patentAcceptedSound != null)
                 audioSource.PlayOneShot(patentAcceptedSound);
             Invoke(nameof(LeaveApproved), leaveDelay);
         }
         else
         {
             exitDialogText.text = _dialogDisapprove;
-            if(!patentRejectedSound)
+            if(patentRejectedSound != null)
                 audioSource.PlayOneShot(patentRejectedSound);
             Invoke(nameof(LeaveRejected), leaveDelay);
         }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Denis Patrick
   m_EditorClassIdentifier: 
   patentImage: {fileID: 21300000, guid: ec55dc88f3f02ec4880b0f905c42537a, type: 3}
-  wrongPatentImage: {fileID: 21300000, guid: ede87c9dc245d194894f5ac5b9272049, type: 3}
+  wrongPatentImage: {fileID: 21300000, guid: c0dbe750407ccd74891febda888e1cf8, type: 3}
   inventorImage: {fileID: 21300000, guid: 08e7d7e4f11c0c2419875e104d626b8a, type: 3}
   handSprite: {fileID: 0}
   patentId: 3
